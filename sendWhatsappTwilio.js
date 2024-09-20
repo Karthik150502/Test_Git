@@ -5,7 +5,7 @@ const authToken = process.env.TWILIO_AUTH;  //twilio.com/console
 
 
 
-var bytes = crypto.AES.decrypt("U2FsdGVkX1+9FTi1HIMC7qNkHXEEeAVWxU0+B7E0b1Y=", 'secret key 123');
+var bytes = crypto.AES.decrypt("U2FsdGVkX1+9FTi1HIMC7qNkHXEEeAVWxU0+B7E0b1Y=", process.env.TWILIO_SECRET_KEY);
 var mymbNo = bytes.toString(crypto.enc.Utf8);
 
 
