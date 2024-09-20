@@ -1,5 +1,9 @@
 import twilio from "twilio"
 import crypto from 'crypto-js';
+import { config } from 'dotenv'
+config()
+
+
 const accountSid = process.env.TWILIO_ACC_SID;
 const authToken = process.env.TWILIO_AUTH;  //twilio.com/console
 
@@ -25,5 +29,3 @@ export default async function sendWhatsAppMessage(body) {
         })
         .then(message => console.log(message.sid))
 }
-
-
