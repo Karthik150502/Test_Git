@@ -29,3 +29,5 @@ export default async function sendWhatsAppMessage(body) {
         })
         .then(message => console.log(message.sid))
 }
+
+
